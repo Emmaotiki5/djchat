@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-3#+=$8y=et0kxf^q-7(hmiv!k5zw!3b$ggrkh-ozc^a*72$ijg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app', 'localhost']
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'chat.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'myproject',
+        'USER': 'postgres',
+        'PASSWORD': 'crabbyworllD.1',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
